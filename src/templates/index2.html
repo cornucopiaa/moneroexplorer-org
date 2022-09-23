@@ -102,7 +102,7 @@
 </div>
 
     {{#is_page_zero}}
-      <h2 style="margin-bottom: 0px">Transactions in the last {{no_of_last_blocks}} blocks</h2>
+      <h2 style="margin-bottom: 0px">Transactions in the last <span style="color: #F26822">{{no_of_last_blocks}}</span> blocks</h2>
     {{/is_page_zero}}
     {{^is_page_zero}}
       <h2 style="margin-bottom: 0px">Transactions in older blocks<!--(height: {{height}})--></h2>
@@ -137,7 +137,7 @@
                 {{/txs}}
             </table>
 
-            <div id="pages" class="center" style="text-align: center;">
+            <div id="pages" class="center" style="text-align: center; overflow: auto;">
              {{^is_page_zero}}
                <a href="/page/{{prev_page}}">previous page</a> |
                <a href="/">first page</a> |
